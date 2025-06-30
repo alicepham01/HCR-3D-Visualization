@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3d265935bbb195655b8aeba793bc62be {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumpopup {
+                            background-color:white;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            background-color:white;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3d265935bbb195655b8aeba793bc62be" ></div>
+        
+    
+     <h3 align="center" style="font-size:20px"><b>Point and Polygon Issues Map</b></h3>
+     
+</body>
+<script>
+    
+    
+            var map_3d265935bbb195655b8aeba793bc62be = L.map(
+                "map_3d265935bbb195655b8aeba793bc62be",
+                {
+                    center: [10.7758, 106.7009],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e7067e5f1df8eebd913c24b742959a89 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e7067e5f1df8eebd913c24b742959a89.addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+            var circle_marker_8820e47db1773204cd5fabbd6efb4dcd = L.circleMarker(
+                [10.78298198, 106.6954964],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_b870e5955eb77e422801ce4d09e96f56 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ffaca71913a748f791da4bf63cdafb0 = $(`<div id="html_4ffaca71913a748f791da4bf63cdafb0" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS1_1<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Dangerous intersections<br>             <b>Description:</b> Hai luồng phương tiện ngược chiều di chuyên với tốc độ nhanh, khó quan sát             </div>`)[0];
+                popup_b870e5955eb77e422801ce4d09e96f56.setContent(html_4ffaca71913a748f791da4bf63cdafb0);
+            
+        
+
+        circle_marker_8820e47db1773204cd5fabbd6efb4dcd.bindPopup(popup_b870e5955eb77e422801ce4d09e96f56)
+        ;
+
+        
+    
+    
+            var circle_marker_d629d9ac6811edfaa607c0facd43160e = L.circleMarker(
+                [10.78223235, 106.6954852],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_77d93897e180e80ebf5097aa4c2f957c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_98972cf05a4cdfb0e23a5fb20a515025 = $(`<div id="html_98972cf05a4cdfb0e23a5fb20a515025" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS1_2<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Dangerous intersections<br>             <b>Description:</b> Xe di chuyển với tốc độ nhanh, khó quan sát, góc cua hẹp             </div>`)[0];
+                popup_77d93897e180e80ebf5097aa4c2f957c.setContent(html_98972cf05a4cdfb0e23a5fb20a515025);
+            
+        
+
+        circle_marker_d629d9ac6811edfaa607c0facd43160e.bindPopup(popup_77d93897e180e80ebf5097aa4c2f957c)
+        ;
+
+        
+    
+    
+            var circle_marker_5842785f89ab0a4c5ad22c59e16c70ff = L.circleMarker(
+                [10.7830232, 106.6959038],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_80dba2ae12c210f98d66091a55e5441c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2a55690d387dacc073b86d2d3a69b51e = $(`<div id="html_2a55690d387dacc073b86d2d3a69b51e" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS2_1<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Risk of traffic accidents<br>             <b>Description:</b> Người đi bộ từ các buildings qua Hồ Con Rùa phải quan sát 3 làn xe (thường di chuyển với tốc độ nhanh) với cùng một hướng di chuyển. Dòng xe từ hướng Trần Cao Vân rẽ phải vào Công Trường Quốc Tế có góc cua hẹp, gặp các vật cản như thùng rác, xe hơi đỗ dưới lòng đường làm hạn chế tầm nhìn của người lái. Vào ban đêm, thiếu ánh sáng dẫn đến hạn chế khả năng quan sát của cả người đi bộ và người điều khiển phương tiện.             </div>`)[0];
+                popup_80dba2ae12c210f98d66091a55e5441c.setContent(html_2a55690d387dacc073b86d2d3a69b51e);
+            
+        
+
+        circle_marker_5842785f89ab0a4c5ad22c59e16c70ff.bindPopup(popup_80dba2ae12c210f98d66091a55e5441c)
+        ;
+
+        
+    
+    
+            var circle_marker_fd9d061a5929f1d5da597d46b34f74ee = L.circleMarker(
+                [10.78230095, 106.6955669],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_25a12d3d7ab88faa04eb3c8709693065 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e805acbcc570f60d8f9330d50165cb1e = $(`<div id="html_e805acbcc570f60d8f9330d50165cb1e" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS2_2<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Risk of traffic accidents<br>             <b>Description:</b> Dòng xe từ Công Trường Quốc Tế rẽ phải vào Võ Văn Tần,   di chuyển với tôc độ nhanh, lòng đường hai làn xe (rộng 6m-7m), góc cua hẹp              </div>`)[0];
+                popup_25a12d3d7ab88faa04eb3c8709693065.setContent(html_e805acbcc570f60d8f9330d50165cb1e);
+            
+        
+
+        circle_marker_fd9d061a5929f1d5da597d46b34f74ee.bindPopup(popup_25a12d3d7ab88faa04eb3c8709693065)
+        ;
+
+        
+    
+    
+            var circle_marker_c32e6bad0297e30bd69ce9ad39c81240 = L.circleMarker(
+                [10.78297412, 106.6955146],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_ae9e3244c8046cded958aae9b4623332 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_92daed756f48149fd51264929f7b58f0 = $(`<div id="html_92daed756f48149fd51264929f7b58f0" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS2_3<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Risk of traffic accidents<br>             <b>Description:</b> Hai luồng phương tiện 1 từ Phạm Ngọc Thạch, 1 ngược lại  từ Công Trường Quốc Tế di chuyển với tôc độ nhanh              </div>`)[0];
+                popup_ae9e3244c8046cded958aae9b4623332.setContent(html_92daed756f48149fd51264929f7b58f0);
+            
+        
+
+        circle_marker_c32e6bad0297e30bd69ce9ad39c81240.bindPopup(popup_ae9e3244c8046cded958aae9b4623332)
+        ;
+
+        
+    
+    
+            var circle_marker_753f84c7eeadb49e1bdeb0be50b8da6e = L.circleMarker(
+                [10.78358394, 106.6949188],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_b6387f11ac1e7bc8f02099488d95e341 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d88d893233540c88e0648b4e02b35f43 = $(`<div id="html_d88d893233540c88e0648b4e02b35f43" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS3_2<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> High vehicle density<br>             <b>Description:</b> Ngã tư Nguyễn Đình Chiểu - Phạm Ngọc Thạch có UEH, ngân hàng, cây ATM, cửa hàng tiện lợi, cửa hàng in ấn, quán ăn uống và trạm xe bus → Thường kẹt xe vào buổi sáng và buổi chiều do người dân đi làm/học, tan làm/học, mua đồ ăn sáng, ăn nhẹ, cà phê, sử dụng tiện ích ở ngân hàng, in ấn, đi xe bus.             </div>`)[0];
+                popup_b6387f11ac1e7bc8f02099488d95e341.setContent(html_d88d893233540c88e0648b4e02b35f43);
+            
+        
+
+        circle_marker_753f84c7eeadb49e1bdeb0be50b8da6e.bindPopup(popup_b6387f11ac1e7bc8f02099488d95e341)
+        ;
+
+        
+    
+    
+            var circle_marker_a5d4e8103ed90301c29658098b20d506 = L.circleMarker(
+                [10.78385201, 106.696971],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_9eb3c3d35128930b267b32dcde0fcbfd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf7bade3f1b0d853add090c18fd54fa1 = $(`<div id="html_cf7bade3f1b0d853add090c18fd54fa1" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS3_3<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> High vehicle density<br>             <b>Description:</b>  Ngã tư Trần Cao Vân - Hai Bà Trưng có trường mầm non, cây xăng, các công ty/văn phòng, quán cà phê và quán ăn vỉa hè → Thường kẹt xe vào buổi sáng do người dân đi làm, đi học, đổ xăng, đưa con đi học và buổi chiều do người dân tan làm, ăn nhẹ, vui chơi, đón con.             </div>`)[0];
+                popup_9eb3c3d35128930b267b32dcde0fcbfd.setContent(html_cf7bade3f1b0d853add090c18fd54fa1);
+            
+        
+
+        circle_marker_a5d4e8103ed90301c29658098b20d506.bindPopup(popup_9eb3c3d35128930b267b32dcde0fcbfd)
+        ;
+
+        
+    
+    
+            var circle_marker_02b451fbdf6bdc17f95dd8589e6c2604 = L.circleMarker(
+                [10.7831862, 106.6952279],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_dbc31bececb211db91332dad33347e34 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_48638880533d17d76da9ff3faa559fc8 = $(`<div id="html_48638880533d17d76da9ff3faa559fc8" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_1<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway: Vehicles exiting too fast from parking garage, 	 Lack of visibility between drivers and pedestrians,  Pedestrians unsure if cars will stop	             </div>`)[0];
+                popup_dbc31bececb211db91332dad33347e34.setContent(html_48638880533d17d76da9ff3faa559fc8);
+            
+        
+
+        circle_marker_02b451fbdf6bdc17f95dd8589e6c2604.bindPopup(popup_dbc31bececb211db91332dad33347e34)
+        ;
+
+        
+    
+    
+            var circle_marker_12dd84a7c49a183745a73a4d36750564 = L.circleMarker(
+                [10.783317, 106.6952464],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_0ca2f34bcf615e91ecb4822db961c490 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4a950c91e9d28eca27d3472b8af3e24d = $(`<div id="html_4a950c91e9d28eca27d3472b8af3e24d" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_2<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_0ca2f34bcf615e91ecb4822db961c490.setContent(html_4a950c91e9d28eca27d3472b8af3e24d);
+            
+        
+
+        circle_marker_12dd84a7c49a183745a73a4d36750564.bindPopup(popup_0ca2f34bcf615e91ecb4822db961c490)
+        ;
+
+        
+    
+    
+            var circle_marker_7553b4daa172edf8b7418cab24ac588a = L.circleMarker(
+                [10.7826902, 106.6953999],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_d37a1dfbc3d527ca45f66980a979130e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9257a8bc64c9fddd69ae353739b9940b = $(`<div id="html_9257a8bc64c9fddd69ae353739b9940b" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_3<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_d37a1dfbc3d527ca45f66980a979130e.setContent(html_9257a8bc64c9fddd69ae353739b9940b);
+            
+        
+
+        circle_marker_7553b4daa172edf8b7418cab24ac588a.bindPopup(popup_d37a1dfbc3d527ca45f66980a979130e)
+        ;
+
+        
+    
+    
+            var circle_marker_b1aaf1c511053da0a811a0cb0dfa3451 = L.circleMarker(
+                [10.7825758, 106.6953981],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_4421c8e18dbe9f65d88fbd3bcfd3136d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ecf62d7266b861d7ca42ef3651a1255d = $(`<div id="html_ecf62d7266b861d7ca42ef3651a1255d" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_4<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_4421c8e18dbe9f65d88fbd3bcfd3136d.setContent(html_ecf62d7266b861d7ca42ef3651a1255d);
+            
+        
+
+        circle_marker_b1aaf1c511053da0a811a0cb0dfa3451.bindPopup(popup_4421c8e18dbe9f65d88fbd3bcfd3136d)
+        ;
+
+        
+    
+    
+            var circle_marker_c1a720b14e842141d95333a6372ff35f = L.circleMarker(
+                [10.7821198, 106.6959751],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_b47fd58e09387007afb7c015873c41ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1a52f5ce3e9046d4c00d636d0c85460c = $(`<div id="html_1a52f5ce3e9046d4c00d636d0c85460c" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_5<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_b47fd58e09387007afb7c015873c41ef.setContent(html_1a52f5ce3e9046d4c00d636d0c85460c);
+            
+        
+
+        circle_marker_c1a720b14e842141d95333a6372ff35f.bindPopup(popup_b47fd58e09387007afb7c015873c41ef)
+        ;
+
+        
+    
+    
+            var circle_marker_7a3c6fd2d47ec3b128e23200f6849cf6 = L.circleMarker(
+                [10.7826194, 106.6964097],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_ad85763d27e35bf41653937ecf38c42c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_67ec3dd1db46447f4c9f965fcb72ca05 = $(`<div id="html_67ec3dd1db46447f4c9f965fcb72ca05" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_6<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_ad85763d27e35bf41653937ecf38c42c.setContent(html_67ec3dd1db46447f4c9f965fcb72ca05);
+            
+        
+
+        circle_marker_7a3c6fd2d47ec3b128e23200f6849cf6.bindPopup(popup_ad85763d27e35bf41653937ecf38c42c)
+        ;
+
+        
+    
+    
+            var circle_marker_f2a2314ccbb0f20e29ef0e34679730d3 = L.circleMarker(
+                [10.7827284, 106.6963912],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_d892ac5a35e02fcfbefa5ac3d0ac73b0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_03e58c4bcbcf3a1998e11c682183fe25 = $(`<div id="html_03e58c4bcbcf3a1998e11c682183fe25" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_7<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_d892ac5a35e02fcfbefa5ac3d0ac73b0.setContent(html_03e58c4bcbcf3a1998e11c682183fe25);
+            
+        
+
+        circle_marker_f2a2314ccbb0f20e29ef0e34679730d3.bindPopup(popup_d892ac5a35e02fcfbefa5ac3d0ac73b0)
+        ;
+
+        
+    
+    
+            var circle_marker_4e885c94d6a4816833937e8df33bdf09 = L.circleMarker(
+                [10.7831744, 106.6965382],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_7e36ddf982a1226b44a3987681cd90d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fc9840abeabd8147a6e90d70a0a0e581 = $(`<div id="html_fc9840abeabd8147a6e90d70a0a0e581" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_8<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_7e36ddf982a1226b44a3987681cd90d4.setContent(html_fc9840abeabd8147a6e90d70a0a0e581);
+            
+        
+
+        circle_marker_4e885c94d6a4816833937e8df33bdf09.bindPopup(popup_7e36ddf982a1226b44a3987681cd90d4)
+        ;
+
+        
+    
+    
+            var circle_marker_10f9459b5143963490aa841cfcb3d788 = L.circleMarker(
+                [10.7835731, 106.6967167],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_468c9dd8928a6be15bf10f3c3055b9c7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_523a8a6e9a3f2503e065a38f80a1889c = $(`<div id="html_523a8a6e9a3f2503e065a38f80a1889c" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_9<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_468c9dd8928a6be15bf10f3c3055b9c7.setContent(html_523a8a6e9a3f2503e065a38f80a1889c);
+            
+        
+
+        circle_marker_10f9459b5143963490aa841cfcb3d788.bindPopup(popup_468c9dd8928a6be15bf10f3c3055b9c7)
+        ;
+
+        
+    
+    
+            var circle_marker_f9ac17f83c2f8dd21c33a37db060fe1a = L.circleMarker(
+                [10.7832834, 106.6964699],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_c32100f5849d664237eecec9e76fb217 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4d5500b6a8c0369cd3bc33a2ed69f097 = $(`<div id="html_4d5500b6a8c0369cd3bc33a2ed69f097" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS4_10<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Conflicts among road users<br>             <b>Description:</b> driveway             </div>`)[0];
+                popup_c32100f5849d664237eecec9e76fb217.setContent(html_4d5500b6a8c0369cd3bc33a2ed69f097);
+            
+        
+
+        circle_marker_f9ac17f83c2f8dd21c33a37db060fe1a.bindPopup(popup_c32100f5849d664237eecec9e76fb217)
+        ;
+
+        
+    
+    
+            var circle_marker_07802bba82eacd150bba105a41e4f809 = L.circleMarker(
+                [10.7832834, 106.69647],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_55178fe26b4055a52303a8a048121ffb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_31629a1f35063fb065e65d8af219ab4c = $(`<div id="html_31629a1f35063fb065e65d8af219ab4c" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_1<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Lấn chiếm vỉa hè bởi bán hàng rong, xe đẩy bán cà phê, người sửa xe. Người đi bộ phải tìm các né hoặc đi xuống lòng đường             </div>`)[0];
+                popup_55178fe26b4055a52303a8a048121ffb.setContent(html_31629a1f35063fb065e65d8af219ab4c);
+            
+        
+
+        circle_marker_07802bba82eacd150bba105a41e4f809.bindPopup(popup_55178fe26b4055a52303a8a048121ffb)
+        ;
+
+        
+    
+    
+            var circle_marker_7aa22286f62b1d8e789f3b5e4e8ea238 = L.circleMarker(
+                [10.7832134, 106.6953759],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_2f40e3547e46e60680d1d1dbe1dc56ba = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_83984f9efa98c28544d940389a529c81 = $(`<div id="html_83984f9efa98c28544d940389a529c81" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_2<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Quán nước vỉa hè lấn chiếm gần hết đường đi bộ, khách đến quán ngồi lấn chiếm khiến người được phỏng vấn lo ngại, thường chọn cách đi xuống lòng đường.             </div>`)[0];
+                popup_2f40e3547e46e60680d1d1dbe1dc56ba.setContent(html_83984f9efa98c28544d940389a529c81);
+            
+        
+
+        circle_marker_7aa22286f62b1d8e789f3b5e4e8ea238.bindPopup(popup_2f40e3547e46e60680d1d1dbe1dc56ba)
+        ;
+
+        
+    
+    
+            var circle_marker_ed7b574375809802f246aeeddfd06b09 = L.circleMarker(
+                [10.7821098, 106.69573],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_b49199c177d58fa26aa314f23f16d76e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d61fa2fbaf5167e731d06a49d5f9a92f = $(`<div id="html_d61fa2fbaf5167e731d06a49d5f9a92f" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_3<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Xe đẩy cà phê bán buổi sáng, khách ngồi uống tại chỗ lấn chiếm gần hết lối đi bộ             </div>`)[0];
+                popup_b49199c177d58fa26aa314f23f16d76e.setContent(html_d61fa2fbaf5167e731d06a49d5f9a92f);
+            
+        
+
+        circle_marker_ed7b574375809802f246aeeddfd06b09.bindPopup(popup_b49199c177d58fa26aa314f23f16d76e)
+        ;
+
+        
+    
+    
+            var circle_marker_3f03f97f6ea79809fb9438a9b5668472 = L.circleMarker(
+                [10.7829618, 106.696308],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_2c142bcee43014f4e2711b09976fc321 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c375b0019057ed67a7f3480386f8d03 = $(`<div id="html_9c375b0019057ed67a7f3480386f8d03" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_4<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Bàn ghế của quán nước, xe máy của khách đến quán cản trở người đi bộ  (buffer 5m radious)             </div>`)[0];
+                popup_2c142bcee43014f4e2711b09976fc321.setContent(html_9c375b0019057ed67a7f3480386f8d03);
+            
+        
+
+        circle_marker_3f03f97f6ea79809fb9438a9b5668472.bindPopup(popup_2c142bcee43014f4e2711b09976fc321)
+        ;
+
+        
+    
+    
+            var circle_marker_3e33ed2274ba676bf8035e69096f742b = L.circleMarker(
+                [10.78319978, 106.6965019],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_bac2f57038a578fa6fb2346840c9d442 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1740ba0e2a8df96560a5b03cdef78e92 = $(`<div id="html_1740ba0e2a8df96560a5b03cdef78e92" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_5<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Buổi sáng quán cà phê vỉa hè. Quán ăn vỉa hè, đỗ xe buổi tối(buffer 5m)             </div>`)[0];
+                popup_bac2f57038a578fa6fb2346840c9d442.setContent(html_1740ba0e2a8df96560a5b03cdef78e92);
+            
+        
+
+        circle_marker_3e33ed2274ba676bf8035e69096f742b.bindPopup(popup_bac2f57038a578fa6fb2346840c9d442)
+        ;
+
+        
+    
+    
+            var circle_marker_c4f5a35387f7f515bb0fd4d7efb052cc = L.circleMarker(
+                [10.78356723, 106.6969256],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_fe9706ceb59b0a7152a0fba6495b105e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aad859190499829ac913a56cc578ae0d = $(`<div id="html_aad859190499829ac913a56cc578ae0d" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_6<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Quán ăn nhậu vỉa hè, đỗ xe (buffer 5m)             </div>`)[0];
+                popup_fe9706ceb59b0a7152a0fba6495b105e.setContent(html_aad859190499829ac913a56cc578ae0d);
+            
+        
+
+        circle_marker_c4f5a35387f7f515bb0fd4d7efb052cc.bindPopup(popup_fe9706ceb59b0a7152a0fba6495b105e)
+        ;
+
+        
+    
+    
+            var circle_marker_5dbcc849e1d6aaf195abde35440547c0 = L.circleMarker(
+                [10.7836567, 106.696786],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_5047c199196692822aba1b90e68944f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c408e00ed6b135018af1db6be8c4c1a4 = $(`<div id="html_c408e00ed6b135018af1db6be8c4c1a4" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_7<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Quán ăn vỉa hè, đỗ xe (buffer 5m)             </div>`)[0];
+                popup_5047c199196692822aba1b90e68944f1.setContent(html_c408e00ed6b135018af1db6be8c4c1a4);
+            
+        
+
+        circle_marker_5dbcc849e1d6aaf195abde35440547c0.bindPopup(popup_5047c199196692822aba1b90e68944f1)
+        ;
+
+        
+    
+    
+            var circle_marker_4adf7423c31df562335d1983240430b8 = L.circleMarker(
+                [10.78324865, 106.6964212],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_070d57c4c4d27d8c153116bdf6f309f6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_73638f6e812a512f185d3ca38ad80e37 = $(`<div id="html_73638f6e812a512f185d3ca38ad80e37" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_8<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Xe máy đỗ trên vỉa hè (buffer 5m)             </div>`)[0];
+                popup_070d57c4c4d27d8c153116bdf6f309f6.setContent(html_73638f6e812a512f185d3ca38ad80e37);
+            
+        
+
+        circle_marker_4adf7423c31df562335d1983240430b8.bindPopup(popup_070d57c4c4d27d8c153116bdf6f309f6)
+        ;
+
+        
+    
+    
+            var circle_marker_56a814ea1aaf23d794a9ac18398cbb1b = L.circleMarker(
+                [10.78312854, 106.6963098],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_29e3912c4e5a8ff8f80b7533c21a025a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8dd278ca2e2d590311f50170fdf726a9 = $(`<div id="html_8dd278ca2e2d590311f50170fdf726a9" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_9<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Xe máy đỗ trên vỉa hè (buffer 5m)             </div>`)[0];
+                popup_29e3912c4e5a8ff8f80b7533c21a025a.setContent(html_8dd278ca2e2d590311f50170fdf726a9);
+            
+        
+
+        circle_marker_56a814ea1aaf23d794a9ac18398cbb1b.bindPopup(popup_29e3912c4e5a8ff8f80b7533c21a025a)
+        ;
+
+        
+    
+    
+            var circle_marker_a697409b38486e7f3025a4f1543ad1f7 = L.circleMarker(
+                [10.78300839, 106.6961678],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_8a4dcde8398006d1cdb961973ae372c8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78589ac875c63f639cd2695f46c27a43 = $(`<div id="html_78589ac875c63f639cd2695f46c27a43" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_10<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Xe máy đỗ trên vỉa hè (buffer 5m)             </div>`)[0];
+                popup_8a4dcde8398006d1cdb961973ae372c8.setContent(html_78589ac875c63f639cd2695f46c27a43);
+            
+        
+
+        circle_marker_a697409b38486e7f3025a4f1543ad1f7.bindPopup(popup_8a4dcde8398006d1cdb961973ae372c8)
+        ;
+
+        
+    
+    
+            var circle_marker_03d763039bb1936bdb19ebc1debb9b05 = L.circleMarker(
+                [10.78311906, 106.695909],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_968924a8b619d60462c707235aeb35ca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b72ea5b34adad2f807f5bd17a20ee5c3 = $(`<div id="html_b72ea5b34adad2f807f5bd17a20ee5c3" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS6_11<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Sidewalk encroachment<br>             <b>Description:</b> Xe máy đỗ trên vỉa hè (buffer 5m)             </div>`)[0];
+                popup_968924a8b619d60462c707235aeb35ca.setContent(html_b72ea5b34adad2f807f5bd17a20ee5c3);
+            
+        
+
+        circle_marker_03d763039bb1936bdb19ebc1debb9b05.bindPopup(popup_968924a8b619d60462c707235aeb35ca)
+        ;
+
+        
+    
+    
+            var circle_marker_3cc1eb9255b512c9983c3d5056fad0df = L.circleMarker(
+                [10.78376958, 106.6968755],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_5e5c29fc11d58a35f623a75a55258b91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aab26044b725e4401191ae7c8f52e0b3 = $(`<div id="html_aab26044b725e4401191ae7c8f52e0b3" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS8_1<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Slippery or uneven pavement<br>             <b>Description:</b> Bề mặt vỉa hè gồ ghề, đá lát bị bể             </div>`)[0];
+                popup_5e5c29fc11d58a35f623a75a55258b91.setContent(html_aab26044b725e4401191ae7c8f52e0b3);
+            
+        
+
+        circle_marker_3cc1eb9255b512c9983c3d5056fad0df.bindPopup(popup_5e5c29fc11d58a35f623a75a55258b91)
+        ;
+
+        
+    
+    
+            var circle_marker_601d561a3e4a6da40afe7f7fd6ff8487 = L.circleMarker(
+                [10.7830232, 106.6959038],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_c9edc4b986bc0354377e03d15d618404 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc37984377a95455a06293e71e1515ad = $(`<div id="html_cc37984377a95455a06293e71e1515ad" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS2_1<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Inconvenient or Unsafe turning points<br>             <b>Description:</b> Người đi bộ từ các buildings qua Hồ Con Rùa phải quan sát 3 làn xe (thường di chuyển với tốc độ nhanh) với cùng một hướng di chuyển. Dòng xe từ hướng Trần Cao Vân rẽ phải vào Công Trường Quốc Tế có góc cua hẹp, gặp các vật cản như thùng rác, xe hơi đỗ dưới lòng đường làm hạn chế tầm nhìn của người lái. Vào ban đêm, thiếu ánh sáng dẫn đến hạn chế khả năng quan sát của cả người đi bộ và người điều khiển phương tiện.             </div>`)[0];
+                popup_c9edc4b986bc0354377e03d15d618404.setContent(html_cc37984377a95455a06293e71e1515ad);
+            
+        
+
+        circle_marker_601d561a3e4a6da40afe7f7fd6ff8487.bindPopup(popup_c9edc4b986bc0354377e03d15d618404)
+        ;
+
+        
+    
+    
+            var circle_marker_d60171998cdd910bc7317350d80f687e = L.circleMarker(
+                [10.7830232, 106.6959038],
+                {"bubblingMouseEvents": true, "color": "#f28e8e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f28e8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_be93cee281b3ef3933d201ccf78ef0e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9732290dceb4e2fb219a92b0f12307c4 = $(`<div id="html_9732290dceb4e2fb219a92b0f12307c4" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> TS2_1<br>             <b>Category:</b> Traffic Safety<br>             <b>Grouped Issues:</b> Collision risk near intersections<br>             <b>Description:</b> Người đi bộ từ các buildings qua Hồ Con Rùa phải quan sát 3 làn xe (thường di chuyển với tốc độ nhanh) với cùng một hướng di chuyển. Dòng xe từ hướng Trần Cao Vân rẽ phải vào Công Trường Quốc Tế có góc cua hẹp, gặp các vật cản như thùng rác, xe hơi đỗ dưới lòng đường làm hạn chế tầm nhìn của người lái. Vào ban đêm, thiếu ánh sáng dẫn đến hạn chế khả năng quan sát của cả người đi bộ và người điều khiển phương tiện.             </div>`)[0];
+                popup_be93cee281b3ef3933d201ccf78ef0e7.setContent(html_9732290dceb4e2fb219a92b0f12307c4);
+            
+        
+
+        circle_marker_d60171998cdd910bc7317350d80f687e.bindPopup(popup_be93cee281b3ef3933d201ccf78ef0e7)
+        ;
+
+        
+    
+    
+        function geo_json_4ee5640055336c1b7278a23abde21582_styler(feature) {
+            switch(feature.properties.Description) {
+                default:
+                    return {"color": "#f28e8e", "fillColor": "#f28e8e", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_4ee5640055336c1b7278a23abde21582_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4ee5640055336c1b7278a23abde21582 = L.geoJson(null, {
+                onEachFeature: geo_json_4ee5640055336c1b7278a23abde21582_onEachFeature,
+            
+                style: geo_json_4ee5640055336c1b7278a23abde21582_styler,
+            ...{
+}
+        });
+
+        function geo_json_4ee5640055336c1b7278a23abde21582_add (data) {
+            geo_json_4ee5640055336c1b7278a23abde21582
+                .addData(data);
+        }
+            geo_json_4ee5640055336c1b7278a23abde21582_add({"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[106.69500253304194, 10.783718198575823, 0.0], [106.69474116295166, 10.783440047831442, 0.0], [106.69478200202826, 10.783395918122398, 0.0], [106.69484892629511, 10.783470840779168, 0.0], [106.69492783473552, 10.78348309840098, 0.0], [106.69527334645022, 10.783182020565295, 0.0], [106.6955237658333, 10.782942805414665, 0.0], [106.69557938499901, 10.78300409951274, 0.0], [106.6955599641226, 10.78301199394395, 0.0], [106.6953500523491, 10.783192793865627, 0.0], [106.69500994881497, 10.7835050848933, 0.0], [106.69498079149201, 10.783565119128069, 0.0], [106.69500224233018, 10.783617214020753, 0.0], [106.6950390151956, 10.78365398688618, 0.0], [106.69504949798004, 10.783670057119233, 0.0], [106.69500253304194, 10.783718198575823, 0.0]]], "type": "Polygon"}, "properties": {"Communication": null, "Description": "\u0110\u01b0\u1eddng Ph\u1ea1m Ng\u1ecdc Th\u1ea1ch trong ph\u1ea1m vi nghi\u00ean c\u1ee9u, v\u00e0o gi\u1edd tan t\u1ea7m th\u01b0\u1eddng c\u00f3 l\u01b0u l\u01b0\u01a1ng ph\u01b0\u01a1ng ti\u1ec7n di chuy\u1ec3n cao\n", "Economic": null, "Social": null, "Spatial": null, "WKT": null, "category": "Traffic Safety\n", "city_branding_domain": "Spatial, Communication, Governance\n", "frequency/score???": "TS3_4\n", "grouped_issues": "High vehicle density\n", "icon_label": null, "issue_number": "3", "point_id": null, "screnario": null, "site_photo_url": "z6754577505316_da8ce08d4d3cfa18a02166f8714088a8.jpg\n", "targeted_solutions": "Speed management, traffic awareness campaigns, enforcement zones\n", "time_frame": "16pm - 20pm "}, "type": "Feature"}, {"geometry": {"coordinates": [[[106.69555354802391, 10.7823198692438, 0.0], [106.69545165654262, 10.782412950559419, 0.0], [106.69561256674879, 10.7825462528031, 0.0], [106.69560746186423, 10.782491090501892, 0.0], [106.695802468455, 10.782312565166835, 0.0], [106.69588661059137, 10.782318241278421, 0.0], [106.69589273940231, 10.782153529485363, 0.0], [106.69574526489001, 10.78214922016518, 0.0], [106.69564854459294, 10.782239045550002, 0.0], [106.69559951410572, 10.782232916739101, 0.0], [106.69535436166952, 10.781967845667472, 0.0], [106.69492647026182, 10.781500674736538, 0.0], [106.69487133750839, 10.781549819494431, 0.0], [106.69514700127552, 10.78184268196683, 0.0], [106.69530753372369, 10.782009119378396, 0.0], [106.69555086666912, 10.782279648922234, 0.0], [106.69555354802391, 10.7823198692438, 0.0]]], "type": "Polygon"}, "properties": {"Communication": null, "Description": "\u0110\u01b0\u1eddng V\u00f5 V\u0103n T\u1ea7n trong ph\u1ea1m vi nghi\u00ean c\u1ee9u, v\u00e0o gi\u1edd tan t\u1ea7m th\u01b0\u1eddng c\u00f3 l\u01b0u l\u01b0\u01a1ng ph\u01b0\u01a1ng ti\u1ec7n di chuy\u1ec3n t\u0103ng cao\n", "Economic": null, "Social": null, "Spatial": null, "WKT": null, "category": "Traffic Safety\n", "city_branding_domain": "Spatial, Communication, Governance", "frequency/score???": null, "grouped_issues": "High vehicle density\n", "icon_label": null, "issue_number": "3", "point_id": "TS3_5", "screnario": null, "site_photo_url": "z6754577505316_da8ce08d4d3cfa18a02166f8714088a8.jpg\n", "targeted_solutions": "Speed management, traffic awareness campaigns, enforcement zones\n", "time_frame": null}, "type": "Feature"}], "name": "safety_polygon", "type": "FeatureCollection"});
+
+        
+    
+    geo_json_4ee5640055336c1b7278a23abde21582.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["point_id", "category", "grouped_issues", "Description"];
+    let aliases = ["Point ID:", "Category:", "Grouped Issues:", "Description:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_4ee5640055336c1b7278a23abde21582.addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+            var circle_marker_131a87334772492e9b0c03fabd3b5565 = L.circleMarker(
+                [10.78335437, 106.69651],
+                {"bubblingMouseEvents": true, "color": "#8ed9b6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ed9b6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_2c7c8bf7a67bbe79c8daa63f38d01510 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_500feed9eea1182a5b8d85f9bb010b81 = $(`<div id="html_500feed9eea1182a5b8d85f9bb010b81" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> CE11<br>             <b>Category:</b> Walkability – Convenience<br>             <b>Grouped Issues:</b> Disconnected paths, lack of crossings or tactile paving <br>             <b>Description:</b> Lối ra vào hẻm khu phố (buffer 5m)             </div>`)[0];
+                popup_2c7c8bf7a67bbe79c8daa63f38d01510.setContent(html_500feed9eea1182a5b8d85f9bb010b81);
+            
+        
+
+        circle_marker_131a87334772492e9b0c03fabd3b5565.bindPopup(popup_2c7c8bf7a67bbe79c8daa63f38d01510)
+        ;
+
+        
+    
+    
+            var circle_marker_146364a8a2c0ac5b1b4dea343f43faf6 = L.circleMarker(
+                [10.78356193, 106.6950121],
+                {"bubblingMouseEvents": true, "color": "#8ed9b6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ed9b6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_f27d344bd59a0cf96809d0affa9dad5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cddd23fb70c3e809c851f3c780370918 = $(`<div id="html_cddd23fb70c3e809c851f3c780370918" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> CE12<br>             <b>Category:</b> Walkability – Convenience<br>             <b>Grouped Issues:</b> Narrow, obstructed, or poorly maintained sidewalks <br>             <b>Description:</b> buffer 5m (Khúc cua gần GS25)             </div>`)[0];
+                popup_f27d344bd59a0cf96809d0affa9dad5e.setContent(html_cddd23fb70c3e809c851f3c780370918);
+            
+        
+
+        circle_marker_146364a8a2c0ac5b1b4dea343f43faf6.bindPopup(popup_f27d344bd59a0cf96809d0affa9dad5e)
+        ;
+
+        
+    
+    
+            var circle_marker_f6d65e449b9d5ac102f396f1a345d314 = L.circleMarker(
+                [10.78302601, 106.6960792],
+                {"bubblingMouseEvents": true, "color": "#8ed9b6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ed9b6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_d8b578ee58a11956b9c80d52e1361268 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3fe60846d619b3580e8d95c5d02bbc4 = $(`<div id="html_a3fe60846d619b3580e8d95c5d02bbc4" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> CE16_1<br>             <b>Category:</b> Walkability – Convenience<br>             <b>Grouped Issues:</b> Poor cleanliness, presence of litter and debris<br>             <b>Description:</b> Chỗ tập kết rác             </div>`)[0];
+                popup_d8b578ee58a11956b9c80d52e1361268.setContent(html_a3fe60846d619b3580e8d95c5d02bbc4);
+            
+        
+
+        circle_marker_f6d65e449b9d5ac102f396f1a345d314.bindPopup(popup_d8b578ee58a11956b9c80d52e1361268)
+        ;
+
+        
+    
+    
+            var circle_marker_6d2cde3d9f4926ef968bfd551dac6227 = L.circleMarker(
+                [10.7826586, 106.6958182],
+                {"bubblingMouseEvents": true, "color": "#8ed9b6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ed9b6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_daa18f83de4ec1bed0ec8e87884ea0cc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_375272a57974a6c2ad9b18ccfde14f37 = $(`<div id="html_375272a57974a6c2ad9b18ccfde14f37" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> CE16_2<br>             <b>Category:</b> Walkability – Convenience<br>             <b>Grouped Issues:</b> None<br>             <b>Description:</b> Buffer 30m, nước hồ không trong, có rác và lá, có mùi             </div>`)[0];
+                popup_daa18f83de4ec1bed0ec8e87884ea0cc.setContent(html_375272a57974a6c2ad9b18ccfde14f37);
+            
+        
+
+        circle_marker_6d2cde3d9f4926ef968bfd551dac6227.bindPopup(popup_daa18f83de4ec1bed0ec8e87884ea0cc)
+        ;
+
+        
+    
+    
+            var circle_marker_7e507e3a04734c4fb326317ef98edf39 = L.circleMarker(
+                [10.78265147, 106.6954384],
+                {"bubblingMouseEvents": true, "color": "#8ed9b6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ed9b6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_d8c2fce278cc8f3ec1281eb5a13e0612 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6dbb7b44207ef3f24305b1997763e168 = $(`<div id="html_6dbb7b44207ef3f24305b1997763e168" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> CE16_3<br>             <b>Category:</b> Walkability – Convenience<br>             <b>Grouped Issues:</b> None<br>             <b>Description:</b> Vũng nước đọng trên lối qua đường             </div>`)[0];
+                popup_d8c2fce278cc8f3ec1281eb5a13e0612.setContent(html_6dbb7b44207ef3f24305b1997763e168);
+            
+        
+
+        circle_marker_7e507e3a04734c4fb326317ef98edf39.bindPopup(popup_d8c2fce278cc8f3ec1281eb5a13e0612)
+        ;
+
+        
+    
+    
+            var circle_marker_99ccc28b38785f2613c64e8fce752627 = L.circleMarker(
+                [10.7836619, 106.6970209],
+                {"bubblingMouseEvents": true, "color": "#8ed9b6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ed9b6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_15e64e894c5c5349826954be36142e9a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_236945446be3f54ba78e477afd44cd31 = $(`<div id="html_236945446be3f54ba78e477afd44cd31" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> CE16_4<br>             <b>Category:</b> Walkability – Convenience<br>             <b>Grouped Issues:</b> None<br>             <b>Description:</b> Chỗ tập kết rác trên vỉa hè, có mùi             </div>`)[0];
+                popup_15e64e894c5c5349826954be36142e9a.setContent(html_236945446be3f54ba78e477afd44cd31);
+            
+        
+
+        circle_marker_99ccc28b38785f2613c64e8fce752627.bindPopup(popup_15e64e894c5c5349826954be36142e9a)
+        ;
+
+        
+    
+    
+            var circle_marker_14e70602b82120564fcbc330c4140ffe = L.circleMarker(
+                [10.7835491, 106.696709],
+                {"bubblingMouseEvents": true, "color": "#8ed9b6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8ed9b6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+        var popup_5c2e4f8cdff9fa75d1254a6a6e0d1d65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e0a53f1e5c5b702c6ef50dbe1b2fa730 = $(`<div id="html_e0a53f1e5c5b702c6ef50dbe1b2fa730" style="width: 100.0%; height: 100.0%;">             <b>Point ID:</b> CE6_5<br>             <b>Category:</b> Walkability – Convenience<br>             <b>Grouped Issues:</b> None<br>             <b>Description:</b> Thùng rác gây mất mỹ quan              </div>`)[0];
+                popup_5c2e4f8cdff9fa75d1254a6a6e0d1d65.setContent(html_e0a53f1e5c5b702c6ef50dbe1b2fa730);
+            
+        
+
+        circle_marker_14e70602b82120564fcbc330c4140ffe.bindPopup(popup_5c2e4f8cdff9fa75d1254a6a6e0d1d65)
+        ;
+
+        
+    
+    
+        function geo_json_0a429616fe9b1648b8e67b5cc41d0604_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#8ed9b6", "fillColor": "#8ed9b6", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_0a429616fe9b1648b8e67b5cc41d0604_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0a429616fe9b1648b8e67b5cc41d0604 = L.geoJson(null, {
+                onEachFeature: geo_json_0a429616fe9b1648b8e67b5cc41d0604_onEachFeature,
+            
+                style: geo_json_0a429616fe9b1648b8e67b5cc41d0604_styler,
+            ...{
+}
+        });
+
+        function geo_json_0a429616fe9b1648b8e67b5cc41d0604_add (data) {
+            geo_json_0a429616fe9b1648b8e67b5cc41d0604
+                .addData(data);
+        }
+            geo_json_0a429616fe9b1648b8e67b5cc41d0604_add({"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[106.69621685033246, 10.78252647780513, 0.0], [106.6962093428778, 10.782507966068138, 0.0], [106.69620061901135, 10.782489976307032, 0.0], [106.69619071609003, 10.782472585556825, 0.0], [106.6961796765197, 10.78245586828749, 0.0], [106.69616754757347, 10.782439896085066, 0.0], [106.69615438118936, 10.782424737345092, 0.0], [106.69614023374785, 10.782410456979754, 0.0], [106.69612516583047, 10.782397116139892, 0.0], [106.69610924196033, 10.78238477195316, 0.0], [106.69609253032588, 10.78237347727939, 0.0], [106.69607510248893, 10.782363280484228, 0.0], [106.69605703307815, 10.782354225232032, 0.0], [106.6960383994695, 10.782346350298882, 0.0], [106.69601928145501, 10.782339689406546, 0.0], [106.69599976090092, 10.782334271078073, 0.0], [106.69597992139724, 10.78233011851564, 0.0], [106.69595984789974, 10.782327249501211, 0.0], [106.69593962636628, 10.78232567632039, 0.0], [106.69591934338852, 10.782325405709786, 0.0], [106.69589908582131, 10.78232643882821, 0.0], [106.69587894041067, 10.782328771251672, 0.0], [106.69585899342232, 10.782332392992345, 0.0], [106.69583933027234, 10.782337288541337, 0.0], [106.69582003516133, 10.782343436935093, 0.0], [106.69580119071398, 10.782350811845172, 0.0], [106.69578287762502, 10.782359381690982, 0.0], [106.69576517431398, 10.782369109775038, 0.0], [106.69574815658913, 10.782379954440067, 0.0], [106.69573189732299, 10.782391869247443, 0.0], [106.6957164661402, 10.782404803175998, 0.0], [106.69570192911948, 10.782418700840546, 0.0], [106.6956883485106, 10.782433502729015, 0.0], [106.6956757824678, 10.782449145457326, 0.0], [106.69566428480078, 10.78246556204078, 0.0], [106.69565390474433, 10.78248268218093, 0.0], [106.69564468674746, 10.782500432566602, 0.0], [106.69563667028305, 10.7825187371878, 0.0], [106.69562988967881, 10.782537517661243, 0.0], [106.69562437397033, 10.782556693565974, 0.0], [106.69562014677675, 10.782576182787757, 0.0], [106.6956172261995, 10.782595901870703, 0.0], [106.69561562474502, 10.782615766374633, 0.0], [106.69561534927091, 10.782635691236669, 0.0], [106.69561640095684, 10.782655591135494, 0.0], [106.69561877529932, 10.782675380856697, 0.0], [106.69562246213106, 10.782694975657678, 0.0], [106.69562744566444, 10.78271429163055, 0.0], [106.69563370455924, 10.782733246061401, 0.0], [106.69564121201392, 10.782751757784531, 0.0], [106.69564993588037, 10.782769747529986, 0.0], [106.69565983880167, 10.782787138263014, 0.0], [106.69567087837201, 10.78280385551394, 0.0], [106.69568300731824, 10.782819827697043, 0.0], [106.69569617370234, 10.78283498641711, 0.0], [106.69571032114386, 10.782849266762298, 0.0], [106.69572538906124, 10.782862607582109, 0.0], [106.69574131293139, 10.782874951749235, 0.0], [106.69575802456582, 10.782886246404177, 0.0], [106.69577545240277, 10.782896443181615, 0.0], [106.69579352181357, 10.782905498417492, 0.0], [106.6958121554222, 10.782913373336005, 0.0], [106.69583127343671, 10.782920034215639, 0.0], [106.69585079399079, 10.782925452533565, 0.0], [106.69587063349448, 10.78292960508778, 0.0], [106.69589070699196, 10.782932474096462, 0.0], [106.69591092852544, 10.782934047274113, 0.0], [106.6959312115032, 10.782934317884168, 0.0], [106.69595146907041, 10.782933284767832, 0.0], [106.69597161448105, 10.782930952349059, 0.0], [106.69599156146938, 10.782927330615587, 0.0], [106.69601122461938, 10.782922435076198, 0.0], [106.69603051973037, 10.782916286694274, 0.0], [106.69604936417774, 10.782908911798058, 0.0], [106.69606767726668, 10.782900341967903, 0.0], [106.69608538057774, 10.782890613901024, 0.0], [106.69610239830256, 10.7828797692544, 0.0], [106.69611865756872, 10.782867854466348, 0.0], [106.6961340887515, 10.7828549205577, 0.0], [106.69614862577222, 10.782841022913306, 0.0], [106.6961622063811, 10.782826221044886, 0.0], [106.69617477242392, 10.78281057833618, 0.0], [106.69618627009092, 10.782794161771553, 0.0], [106.69619665014739, 10.782777041649124, 0.0], [106.69620586814425, 10.782759291279774, 0.0], [106.69621388460865, 10.782740986673213, 0.0], [106.6962206652129, 10.78272220621247, 0.0], [106.69622618092137, 10.78270303031829, 0.0], [106.69623040811497, 10.782683541104722, 0.0], [106.6962333286922, 10.782663822027523, 0.0], [106.6962349301467, 10.782643957526766, 0.0], [106.69623520562078, 10.782624032665275, 0.0], [106.69623415393487, 10.782604132764366, 0.0], [106.69623177959238, 10.782584343038478, 0.0], [106.69622809276066, 10.782564748230287, 0.0], [106.69622310922728, 10.782545432247815, 0.0], [106.69621685033246, 10.78252647780513, 0.0]]], "type": "Polygon"}, "id": "0", "properties": {"Communication": null, "Description": "Thi\u1ebfu ch\u1ed7 ngh\u1ec9 ch\u00e2n, \u0111\u00e8n chi\u1ebfu s\u00e1ng, th\u00f9ng r\u00e1c c\u00f4ng c\u1ed9ng, ch\u1ed7 ch\u01a1i cho tr\u1ebb em", "Economic": null, "Social": null, "Spatial": null, "WKT": null, "category": "Walkability \u2013 Convenience\t\t", "city_branding_domain": "Spatial, Economic", "frequency/score???": null, "grouped_issues": "Inadequate pedestrian amenities (e.g., benches, signage, water points)\u00a0", "icon_label": null, "issue_number": "15", "point_id": "CE15_1", "screnario": "S1", "site_photo_url": null, "targeted_solutions": "Benches, water points, pedestrian signage and shade shelters", "time_frame": null}, "type": "Feature"}, {"geometry": {"coordinates": [[[106.6968604211865, 10.783884583396466, 0.0], [106.69682058391561, 10.783855471544667, 0.0], [106.69686578389602, 10.783820230881968, 0.0], [106.6968665499974, 10.783754346164745, 0.0], [106.69672252294113, 10.783604956398953, 0.0], [106.69653099760035, 10.783376658192761, 0.0], [106.69656010945214, 10.783374359888676, 0.0], [106.69660607553394, 10.78340117343638, 0.0], [106.69675929580656, 10.783567417432163, 0.0], [106.69691251607918, 10.78373749193476, 0.0], [106.69692860420781, 10.783788054624718, 0.0], [106.69688263812601, 10.78386543086239, 0.0], [106.6968604211865, 10.783884583396466, 0.0]]], "type": "Polygon"}, "id": "1", "properties": {"Communication": null, "Description": "Thi\u1ebfu ch\u1ed7 ngh\u1ec9 ch\u00e2n, \u0111\u00e8n chi\u1ebfu s\u00e1ng, th\u00f9ng r\u00e1c c\u00f4ng c\u1ed9ng, ch\u1ed7 ch\u01a1i cho tr\u1ebb em", "Economic": null, "Social": null, "Spatial": null, "WKT": null, "category": "Walkability \u2013 Convenience", "city_branding_domain": "Spatial, Economic", "frequency/score???": null, "grouped_issues": "Inadequate pedestrian amenities (e.g., benches, signage, water points)\u00a0", "icon_label": null, "issue_number": "15", "point_id": "CE15_2", "screnario": "S1", "site_photo_url": null, "targeted_solutions": "Benches, water points, pedestrian signage and shade shelters", "time_frame": null}, "type": "Feature"}, {"geometry": {"coordinates": [[[106.69648732982267, 10.783329926009621, 0.0], [106.69649345863357, 10.783305027715322, 0.0], [106.69649192643084, 10.783285492130563, 0.0], [106.69642757391631, 10.783211563349024, 0.0], [106.69637547902362, 10.783156404050882, 0.0], [106.6962444756905, 10.78301773970417, 0.0], [106.69620234011555, 10.783012376994634, 0.0], [106.69622149264964, 10.783047617657333, 0.0], [106.69634713327318, 10.783182451497229, 0.0], [106.69648732982267, 10.783329926009621, 0.0]]], "type": "Polygon"}, "id": "2", "properties": {"Communication": null, "Description": "Thi\u1ebfu ch\u1ed7 ngh\u1ec9 ch\u00e2n, \u0111\u00e8n chi\u1ebfu s\u00e1ng, th\u00f9ng r\u00e1c c\u00f4ng c\u1ed9ng, ch\u1ed7 ch\u01a1i cho tr\u1ebb em", "Economic": null, "Social": null, "Spatial": null, "WKT": null, "category": "Walkability \u2013 Convenience", "city_branding_domain": "Spatial, Economic", "frequency/score???": null, "grouped_issues": "Inadequate pedestrian amenities (e.g., benches, signage, water points)\u00a0", "icon_label": null, "issue_number": "15", "point_id": "CE15_2", "screnario": "S1", "site_photo_url": null, "targeted_solutions": "Benches, water points, pedestrian signage and shade shelters", "time_frame": null}, "type": "Feature"}, {"geometry": {"coordinates": [[[106.6970776109229, 10.783666244507996, 0.0], [106.69709140074744, 10.78369229195434, 0.0], [106.69703317704385, 10.783703017373425, 0.0], [106.69696582942699, 10.783681672478895, 0.0], [106.6964896281268, 10.78317440743292, 0.0], [106.69629350617787, 10.782972156673075, 0.0], [106.69628737736697, 10.782941512618555, 0.0], [106.69629044177242, 10.782927722794017, 0.0], [106.6963900349496, 10.782840387238632, 0.0], [106.69639922816596, 10.782550800923412, 0.0], [106.69640305867276, 10.782445845036674, 0.0], [106.69632644853645, 10.782365021342876, 0.0], [106.69653904166469, 10.782171963799382, 0.0], [106.69655819419877, 10.78219418073891, 0.0], [106.69651222811699, 10.78224704173296, 0.0], [106.69637816037846, 10.782367319646958, 0.0], [106.69643906543682, 10.782430523009408, 0.0], [106.69642910611911, 10.782853410961806, 0.0], [106.69632568243512, 10.782948407530826, 0.0], [106.69651567557314, 10.783147593885213, 0.0], [106.69700732112287, 10.783665478406633, 0.0], [106.69703758212673, 10.783671032641516, 0.0], [106.6970776109229, 10.783666244507996, 0.0]]], "type": "Polygon"}, "id": "3", "properties": {"Communication": "play street for Car Free Day (weekend)", "Description": "Khu v\u1ef1c thi\u1ebfu s\u00e1ng, thi\u1ebfu ho\u1ea1t \u0111\u1ed9ng d\u00e0nh cho tr\u1ebb em", "Economic": null, "Social": null, "Spatial": "Interactive play zones, child-friendly social spaces, passive surveillance\n", "WKT": null, "category": "Walkability \u2013 Convenience", "city_branding_domain": "Spatial, Economic, Governance", "frequency/score???": null, "grouped_issues": "Perceived isolation or danger in certain areas ", "icon_label": null, "issue_number": "19", "point_id": "CI19_3", "screnario": "S1", "site_photo_url": null, "targeted_solutions": "Lighting improvement, sensor-based illumination", "time_frame": null}, "type": "Feature"}, {"geometry": {"coordinates": [[[106.6962915421177, 10.782392143070721, 0.0], [106.69627505103075, 10.782369217342882, 0.0], [106.69625706888999, 10.782347400225541, 0.0], [106.69623767269763, 10.782326785143187, 0.0], [106.69621694551118, 10.782307460373028, 0.0], [106.69619497608764, 10.782289508666954, 0.0], [106.69617185850346, 10.782273006897176, 0.0], [106.69614769175165, 10.782258025727048, 0.0], [106.69612257931799, 10.782244629308476, 0.0], [106.69609662873773, 10.78223287500719, 0.0], [106.69606995113531, 10.78222281315712, 0.0], [106.69604266074823, 10.782214486844813, 0.0], [106.6960148744382, 10.782207931724967, 0.0], [106.69598671119046, 10.782203175867727, 0.0], [106.69595829160427, 10.782200239638486, 0.0], [106.69592973737676, 10.782199135610687, 0.0], [106.69590117078147, 10.782199868511965, 0.0], [106.69587271414494, 10.78220243520391, 0.0], [106.69584448932287, 10.782206824695509, 0.0], [106.6958166171783, 10.782213018190198, 0.0], [106.695789217064, 10.782220989166383, 0.0], [106.69576240631149, 10.782230703490969, 0.0], [106.69573629972851, 10.782242119565572, 0.0], [106.69571100910747, 10.782255188504607, 0.0], [106.69568664274668, 10.782269854344667, 0.0], [106.69566330498667, 10.782286054284135, 0.0], [106.69564109576325, 10.782303718952157, 0.0], [106.69562011017977, 10.782322772705642, 0.0], [106.6956004380997, 10.782343133953251, 0.0], [106.69558216376194, 10.782364715504732, 0.0], [106.69556536542, 10.782387424944325, 0.0], [106.69555011500692, 10.78241116502647, 0.0], [106.69553647782732, 10.782435834092261, 0.0], [106.69552451227776, 10.782461326504759, 0.0], [106.69551426959647, 10.78248753310134, 0.0], [106.69550579364424, 10.782514341661168, 0.0], [106.69549912071639, 10.782541637385725, 0.0], [106.69549427938743, 10.782569303390417, 0.0], [106.69549129038863, 10.78259722120507, 0.0], [106.69549016651939, 10.782625271281264, 0.0], [106.69549091259229, 10.782653333504252, 0.0], [106.69549352541247, 10.782681287707296, 0.0], [106.6954979937915, 10.782709014186256, 0.0], [106.6955042985951, 10.78273639421217, 0.0], [106.69551241282507, 10.782763310539675, 0.0], [106.6955223017351, 10.782789647909063, 0.0], [106.69553392297928, 10.782815293539844, 0.0], [106.69554722679374, 10.782840137613675, 0.0], [106.69556215620946, 10.782864073744632, 0.0], [106.6955786472964, 10.782886999434764, 0.0], [106.69559662943718, 10.782908816512974, 0.0], [106.69561602562953, 10.782929431555445, 0.0], [106.69563675281597, 10.782948756285652, 0.0], [106.69565872223951, 10.782966707952388, 0.0], [106.6956818398237, 10.78298320968412, 0.0], [106.6957060065755, 10.782998190818134, 0.0], [106.69573111900917, 10.78301158720315, 0.0], [106.69575706958942, 10.78302334147401, 0.0], [106.69578374719184, 10.78303340329731, 0.0], [106.69581103757892, 10.783041729586952, 0.0], [106.69583882388895, 10.783048284688633, 0.0], [106.6958669871367, 10.783053040532511, 0.0], [106.6958954067229, 10.78305597675343, 0.0], [106.6959239609504, 10.783057080778086, 0.0], [106.6959525275457, 10.783056347878894, 0.0], [106.69598098418223, 10.783053781194235, 0.0], [106.6960092090043, 10.783049391714995, 0.0], [106.69603708114886, 10.78304319823752, 0.0], [106.69606448126315, 10.783035227283122, 0.0], [106.69609129201567, 10.783025512984512, 0.0], [106.69611739859864, 10.783014096939636, 0.0], [106.69614268921968, 10.783001028033567, 0.0], [106.69616705558047, 10.782986362229153, 0.0], [106.6961903933405, 10.782970162327391, 0.0], [106.6962126025639, 10.782952497698503, 0.0], [106.69623358814741, 10.782933443984899, 0.0], [106.69625326022745, 10.78291308277724, 0.0], [106.69627153456521, 10.782891501265095, 0.0], [106.69628833290717, 10.782868791863555, 0.0], [106.69630358332024, 10.782845051817523, 0.0], [106.69631722049984, 10.782820382785284, 0.0], [106.6963291860494, 10.782794890403213, 0.0], [106.69633942873068, 10.782768683833405, 0.0], [106.69634790468291, 10.782741875296239, 0.0], [106.69635457761076, 10.78271457958985, 0.0], [106.69635941893975, 10.78268691359852, 0.0], [106.69636240793852, 10.78265899579219, 0.0], [106.69636353180776, 10.782630945719136, 0.0], [106.69636278573488, 10.782602883494063, 0.0], [106.69636017291468, 10.782574929283731, 0.0], [106.69635570453565, 10.782547202792415, 0.0], [106.69634939973206, 10.782519822749284, 0.0], [106.69634128550209, 10.782492906399996, 0.0], [106.69633139659206, 10.78246656900463, 0.0], [106.69631977534787, 10.782440923344122, 0.0], [106.69630647153342, 10.782416079237324, 0.0], [106.6962915421177, 10.782392143070721, 0.0]]], "type": "Polygon"}, "id": "4", "properties": {"Communication": null, "Description": "Khu v\u1ef1c thi\u1ebfu \u00e1nh s\u00e1ng", "Economic": null, "Social": null, "Spatial": "Install sidewalk-level lighting (e.g., 3-meter poles or bollards) along key pedestrian paths.", "WKT": null, "category": "Walkability \u2013 Convenience", "city_branding_domain": "Spatial, Economic, Governance", "frequency/score???": null, "grouped_issues": "Poor lighting, dark or low-visibility areas ", "icon_label": null, "issue_number": "18", "point_id": "CE18", "screnario": "S1", "site_photo_url": null, "targeted_solutions": "Lighting improvement, sensor-based illumination", "time_frame": null}, "type": "Feature"}, {"geometry": {"coordinates": [[[106.69510979667987, 10.783468626190558, 0.0], [106.69508656503737, 10.783441498863256, 0.0], [106.69513937447422, 10.783390448017292, 0.0], [106.69550547516329, 10.783060210448559, 0.0], [106.69552862374437, 10.783086044530995, 0.0], [106.69510979667987, 10.783468626190558, 0.0]]], "type": "Polygon"}, "id": "5", "properties": {"Communication": "play street for Car Free Day (weekend)", "Description": "\u00cdt h\u00e0ng qu\u00e1n, ng\u01b0\u1eddi xung quanh ho\u1eb7c ho\u1ea1t \u0111\u1ed9ng. L\u00e0 khu v\u1ef1c thi\u1ebfu \u00e1nh s\u00e1ng", "Economic": null, "Social": null, "Spatial": "Interactive play zones, child-friendly social spaces, passive surveillance\n", "WKT": null, "category": "Walkability \u2013 Conviviality", "city_branding_domain": "Social, Communication, Economic", "frequency/score???": null, "grouped_issues": "Perceived isolation or danger in certain areas ", "icon_label": null, "issue_number": "19", "point_id": "CI19_1", "screnario": "S1", "site_photo_url": null, "targeted_solutions": "Lighting improvement, sensor-based illumination", "time_frame": null}, "type": "Feature"}, {"geometry": {"coordinates": [[[106.69484892629511, 10.783470840779168, 0.0], [106.69488550763532, 10.78342420435871, 0.0], [106.69492036524717, 10.783432918761697, 0.0], [106.69549695228558, 10.782919056272407, 0.0], [106.6955245319347, 10.782897605434243, 0.0], [106.6955237658333, 10.782942805414665, 0.0], [106.69527334645022, 10.783182020565295, 0.0], [106.69492783473552, 10.78348309840098, 0.0], [106.69484892629511, 10.783470840779168, 0.0]]], "type": "Polygon"}, "id": "6", "properties": {"Communication": "play street for Car Free Day (weekend)", "Description": "\u00cdt h\u00e0ng qu\u00e1n, ng\u01b0\u1eddi xung quanh ho\u1eb7c ho\u1ea1t \u0111\u1ed9ng. L\u00e0 khu v\u1ef1c thi\u1ebfu \u00e1nh s\u00e1ng", "Economic": null, "Social": null, "Spatial": "Interactive play zones, child-friendly social spaces, passive surveillance\n", "WKT": null, "category": "Walkability \u2013 Conviviality", "city_branding_domain": "Social, Communication, Economic", "frequency/score???": null, "grouped_issues": "Perceived isolation or danger in certain areas ", "icon_label": null, "issue_number": "19", "point_id": "CI19_2", "screnario": "S1", "site_photo_url": null, "targeted_solutions": "Lighting improvement, sensor-based illumination", "time_frame": null}, "type": "Feature"}], "name": "walkability_polygon", "type": "FeatureCollection"});
+
+        
+    
+    geo_json_0a429616fe9b1648b8e67b5cc41d0604.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["point_id", "category", "grouped_issues", "Description"];
+    let aliases = ["Point ID:", "Category:", "Grouped Issues:", "Description:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_0a429616fe9b1648b8e67b5cc41d0604.addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+            var layer_control_5dc4e47c5a0c72f96c61eb85744861ff_layers = {
+                base_layers : {
+                    "cartodbdarkmatter" : tile_layer_e7067e5f1df8eebd913c24b742959a89,
+                },
+                overlays :  {
+                    "Safety Polygon" : geo_json_4ee5640055336c1b7278a23abde21582,
+                    "Walkability Polygon" : geo_json_0a429616fe9b1648b8e67b5cc41d0604,
+                },
+            };
+            let layer_control_5dc4e47c5a0c72f96c61eb85744861ff = L.control.layers(
+                layer_control_5dc4e47c5a0c72f96c61eb85744861ff_layers.base_layers,
+                layer_control_5dc4e47c5a0c72f96c61eb85744861ff_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_3d265935bbb195655b8aeba793bc62be);
+
+        
+    
+            tile_layer_e7067e5f1df8eebd913c24b742959a89.addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+            geo_json_4ee5640055336c1b7278a23abde21582.addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+    
+            geo_json_0a429616fe9b1648b8e67b5cc41d0604.addTo(map_3d265935bbb195655b8aeba793bc62be);
+        
+</script>
+</html>
