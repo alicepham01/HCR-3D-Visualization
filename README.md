@@ -8,9 +8,9 @@
 | safety_point        | Points showing safety issues (e.g. dark areas)   | GeoJSON / Shapefile          | Field survey / Observations   |
 | safety_polygon      | Polygons representing safety zones/areas         | GeoJSON / Shapefile          | Digitized from map / Fieldwork|
 | walkability_polygon | Areas rated for walkability                      | GeoJSON / Shapefile          | Surveys / Observations        |
-| 1st_2nd_blocks      | Sub-layer of urban blocks (1st & 2nd lines)      | Vector polygons               | Urban zoning map              |
+| 1st_2nd_blocks      | Sub-layer of 1st & 2nd blocks in       | Vector polygons               | Urban zoning map              |
 | 3rd_4th_blocks      | Sub-layer of deeper interior blocks              | Vector polygons               | Urban zoning map              |
-| Building_plain      | Building footprints without texture              | Vector or 3D model            | OpenStreetMap / Manual digitizing |
+| Building_plain      | Building footprints around study area without attribute              | Vector or 3D model            | OpenStreetMap / Manual digitizing |
 | Ho_Con_Rua          | 3D model of the Hồ Con Rùa area                  | 3D OBJ / glTF / GeoJSON 3D   | Laser scanning / Photogrammetry |
 
 ## Methodology (from investigating to mapping)
