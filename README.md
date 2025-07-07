@@ -2,16 +2,16 @@
 **[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
 ![image](https://github.com/user-attachments/assets/2a15519a-1b7f-44e6-9455-230a8ad8feba)
 ## Data  
-| Layer               | Description                                      | Data                         | Source                        |
+| Layer               | Description                                      | Type                         | Source                        |
 |---------------------|--------------------------------------------------|------------------------------|-------------------------------|
-| walkability_point   | Points indicating walkability-related features   | GeoJSON / Shapefile          | Field survey / Observations   |
-| safety_point        | Points showing safety issues (e.g. dark areas)   | GeoJSON / Shapefile          | Field survey / Observations   |
-| safety_polygon      | Polygons representing safety zones/areas         | GeoJSON / Shapefile          | Digitized from map / Fieldwork|
-| walkability_polygon | Areas rated for walkability                      | GeoJSON / Shapefile          | Surveys / Observations        |
-| 1st_2nd_blocks      | Sub-layer of 1st & 2nd blocks in       | Vector polygons               | Urban zoning map              |
-| 3rd_4th_blocks      | Sub-layer of deeper interior blocks              | Vector polygons               | Urban zoning map              |
-| Building_plain      | Building footprints around study area without attribute              | Vector or 3D model            | OpenStreetMap / Manual digitizing |
-| Ho_Con_Rua          | 3D model of the Hồ Con Rùa area                  | 3D OBJ / glTF / GeoJSON 3D   | Laser scanning / Photogrammetry |
+| walkability_point   | Points indicating walkability-related features   | GeoJSON         | Field survey / Observations   |
+| safety_point        | Points showing safety issues (e.g. dark areas)   | GeoJSON           | Field survey / Observations   |
+| safety_polygon      | Areas with issues are classified under the safety category       | GeoJSON          | Digitized from map / Fieldwork|
+| walkability_polygon | Areas with issues are classified under the walkability category                      | GeoJSON          | Surveys / Observations        |
+| 1st_2nd_blocks      | The first and second building blocks in the study area.     | Vector polygons               | Urban zoning map              |
+| 3rd_4th_blocks      | The third and fourth building blocks in the study area.               | Vector polygons               | Urban zoning map              |
+| Building_plain      | Building footprints around study area without attribute              | Vector or 3D model            | OpenStreetMap |
+| Ho_Con_Rua          | 3D model of the Hồ Con Rùa area                  | 3D OBJ   | Laser scanning / Photogrammetry |
 
 ## Methodology (from investigating to mapping)
 ### Step 1
