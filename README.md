@@ -1,6 +1,30 @@
 # 3D mapping (Draft) 
 **[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
 ![image](https://github.com/user-attachments/assets/2a15519a-1b7f-44e6-9455-230a8ad8feba)
+
+walkability_point layer
+Color: 🟢 Green 
+Symbol: Map pointer icon.
+
+safety_point layer
+Color: 🔴 Red 
+Symbol: Map pointer icon.
+
+safety_polygon layer
+Color: 🔴 Red 
+
+walkability_polygon layer
+Color: 🟢 Green — representing walkability aspects.
+
+| Layer Info                                                                                                        | Image Example            |
+|------------------------------------------------------------------------------------------------------------------|--------------------------|
+| **Walkability Layers**  <br>• `walkability_point`: Green pointer markers for sidewalk conditions and obstructions.  <br>• `walkability_polygon`: Green-shaded areas representing zones with walkability issues. | ![Walkability Image](image-link-1.png) |
+| **Building Block Layers** <br>• `1st_2nd_blocks`: First and second blocks with building height and function.  <br>• `3rd_4th_blocks`: Third and fourth blocks with similar attributes.                   | ![Building Blocks Image](image-link-2.png) |
+
+
+
+![Picture1](https://github.com/user-attachments/assets/13e91a51-8fb2-4afc-b715-76ff810bea5d)
+
 ## Data  
 | Layer               | Description                                                                                 | Type     | Source                                                                                                                                                                                                                                                                       | Attributes                                 |
 |---------------------|---------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
@@ -12,7 +36,6 @@
 | 3rd_4th_blocks      | Third and fourth building blocks in study area                                              | polygon  | Field survey and OpenStreetMap                                                                                                                                                                                                                                               | building_height, building_function         |
 | Building_plain      | Building footprints around study area                                                       | polygon  | OpenStreetMap                                                                                                                                                                                                                                                                | Basic geometry only                        |
 | Ho_Con_Rua          | 3D model of the Hồ Con Rùa area                                                             | 3D OBJ   | [model link](https://embed-3dwarehouse-classic.sketchup.com/model/240d196d-e025-4c86-bd1f-dbd7f9c46f73/Turtle-Lake-Ho-Chi-Minh-city-H%E1%BB%93-Con-R%C3%B9a) | Mesh geometry, texture, landmark elements  |
-
 
 ## Methodology (from investigating to mapping)
 ### Step 1
