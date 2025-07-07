@@ -2,15 +2,9 @@
 **[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
 | Layer Info | Image Example |
 |------------|---------------|
-| **Walkability & Safety Layers**  
-• `walkability_point` layer — 🟢 Green, Map pointer icon  
+| **Walkability & Safety Layers**<br>• `walkability_point` layer — 🟢 Green, Map pointer icon<br>• `safety_point` layer — 🔴 Red, Map pointer icon<br>• `walkability_polygon` layer — 🟢 Green shaded areas<br>• `safety_polygon` layer — 🔴 Red shaded areas | ![image](https://github.com/user-attachments/assets/71fdf0de-9daf-4d31-a824-093e792a8d76) |
+| **Building Block Layers**<br>• `1st_2nd_blocks`: First and second blocks with building height and function<br>• `3rd_4th_blocks`: Third and fourth blocks with similar attributes | ![Picture1](https://github.com/user-attachments/assets/13e91a51-8fb2-4afc-b715-76ff810bea5d) |
 
-• `safety_point` layer — 🔴 Red, Map pointer icon  
-• `walkability_polygon` layer — 🟢 Green shaded areas  
-• `safety_polygon` layer — 🔴 Red shaded areas |  ![image](https://github.com/user-attachments/assets/71fdf0de-9daf-4d31-a824-093e792a8d76)  |                                                                                        
-| **Building Block Layers**  
-• `1st_2nd_blocks`: First and second blocks with building height and function  
-• `3rd_4th_blocks`: Third and fourth blocks with similar attributes | ![Picture1](https://github.com/user-attachments/assets/13e91a51-8fb2-4afc-b715-76ff810bea5d) |
 
 ## Data  
 | Layer               | Description                                                                                 | Type     | Source                                                                                                                                                                                                                                                                       | Attributes                                 |
