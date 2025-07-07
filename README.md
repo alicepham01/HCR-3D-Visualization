@@ -7,7 +7,7 @@
 
 • `safety_point` layer — 🔴 Red, Map pointer icon  
 • `walkability_polygon` layer — 🟢 Green shaded areas  
-• `safety_polygon` layer — 🔴 Red shaded areas|![image](https://github.com/user-attachments/assets/71fdf0de-9daf-4d31-a824-093e792a8d76)|                                                                                        
+• `safety_polygon` layer — 🔴 Red shaded areas |  ![image](https://github.com/user-attachments/assets/71fdf0de-9daf-4d31-a824-093e792a8d76)  |                                                                                        
 | **Building Block Layers**  
 • `1st_2nd_blocks`: First and second blocks with building height and function  
 • `3rd_4th_blocks`: Third and fourth blocks with similar attributes | ![Picture1](https://github.com/user-attachments/assets/13e91a51-8fb2-4afc-b715-76ff810bea5d) |
