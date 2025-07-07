@@ -1,5 +1,5 @@
 # 3D mapping (Draft) 
-**[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - Note: This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
+**[LIVE DEMO ](https://alicepham01.github.io/HCR-3D-Visualization/) - Note: This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
 
 ![image](https://github.com/user-attachments/assets/b0893997-1372-4c58-ba02-e5a22e71c0b2)
 | Layer Info |  |
