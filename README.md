@@ -1,37 +1,21 @@
 # 3D mapping (Draft) 
 **[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
-
-
-walkability_point layer
-Color: 🟢 Green 
-Symbol: Map pointer icon.
-
-safety_point layer
-Color: 🔴 Red 
-Symbol: Map pointer icon.
-
-safety_polygon layer
-Color: 🔴 Red 
-
-walkability_polygon layer
-Color: 🟢 Green 
-
-| Layer Info                                                                                                        | Image Example            |
-|------------------------------------------------------------------------------------------------------------------|--------------------------|
-| **Walkability Layers**  <br>• `walkability_point` layer
-Color: 🟢 Green 
-Symbol: Map pointer icon.
-
-`safety_point` layer
-Color: 🔴 Red 
-Symbol: Map pointer icon.
-
-`safety_polygon` layer
-Color: 🔴 Red 
-
-`walkability_polygon` layer
-Color: 🟢 Green  | ![image](https://github.com/user-attachments/assets/2a15519a-1b7f-44e6-9455-230a8ad8feba)|
-| **Building Block Layers** <br>• `1st_2nd_blocks`: First and second blocks with building height and function.  <br>• `3rd_4th_blocks`: Third and fourth blocks with similar attributes.                  | ![Picture1](https://github.com/user-attachments/assets/13e91a51-8fb2-4afc-b715-76ff810bea5d) |
+| Layer Info | Image Example |
+|------------|---------------|
+| **Walkability Layers**  
+<br>• `walkability_point` layer  
+Color: 🟢 Green  
+Symbol: Map pointer icon.  
+<br>• `safety_point` layer  
+Color: 🔴 Red  
+Symbol: Map pointer icon.  
+<br>• `safety_polygon` layer  
+Color: 🔴 Red  
+<br>• `walkability_polygon` layer  
+Color: 🟢 Green | ![image](https://github.com/user-attachments/assets/2a15519a-1b7f-44e6-9455-230a8ad8feba) |
+| **Building Block Layers**  
+<br>• `1st_2nd_blocks`: First and second blocks with building height and function.  
+<br>• `3rd_4th_blocks`: Third and fourth blocks with similar attributes. | ![Picture1](https://github.com/user-attachments/assets/13e91a51-8fb2-4afc-b715-76ff810bea5d) |
 
 
 
