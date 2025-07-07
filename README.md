@@ -1,5 +1,7 @@
 # 3D mapping (Draft) 
-**[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
+**[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can 
+not click on the map pointer(issue markers)**
+![image](https://github.com/user-attachments/assets/b0893997-1372-4c58-ba02-e5a22e71c0b2)
 | Layer Info | Image Example |
 |------------|---------------|
 | **Walkability & Safety Layers**<br>• `walkability_point` layer — 🟢 Green, Map pointer icon<br>• `safety_point` layer — 🔴 Red, Map pointer icon<br>• `walkability_polygon` layer — 🟢 Green shaded areas<br>• `safety_polygon` layer — 🔴 Red shaded areas | ![image](https://github.com/user-attachments/assets/71fdf0de-9daf-4d31-a824-093e792a8d76) |
