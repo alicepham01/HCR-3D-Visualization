@@ -21,14 +21,32 @@ not click on the map pointer(issue markers)**
 | Ho_Con_Rua          | 3D model of the Hồ Con Rùa area                                                             | 3D OBJ   | [model link](https://embed-3dwarehouse-classic.sketchup.com/model/240d196d-e025-4c86-bd1f-dbd7f9c46f73/Turtle-Lake-Ho-Chi-Minh-city-H%E1%BB%93-Con-R%C3%B9a) | Mesh geometry, texture, landmark elements  |
 
 ## Methodology (from investigating to mapping)
-### Step 1
-![image](https://github.com/user-attachments/assets/1ba665f7-e843-46d6-a79d-15f7dd70a19d)
-![image](https://github.com/user-attachments/assets/58c07462-897e-418d-8f1a-f952a2dd660f)
-![image](https://github.com/user-attachments/assets/f30dc1b9-0374-4465-81b2-366c36cb81e1)
-![image](https://github.com/user-attachments/assets/9c5183e2-5689-4d1e-ab73-322f71a54e8c)
-![image](https://github.com/user-attachments/assets/f9b0203d-827e-4517-86f9-0b23551464af)
-![image](https://github.com/user-attachments/assets/ba4eea18-f186-4308-827f-6d57fcff1fc8)
 
+### Step 1 - Test walks and Photographing
+We studied the literature and made a list of all the factors that are most commonly found to impact walking experience. A systematic walking audit was conducted across the study path to observe and document physical conditions affecting pedestrian experience. The team recorded field notes and photographs using GPS-enabled mobile devices to take coordination of objects, focusing on predefined indicators such as dangerous intersections, sidewalk encroachments, among others.
+
+![image](https://github.com/user-attachments/assets/42fee24e-2e03-498e-890b-bfa5080fed5d)
+
+### Step 2 - we clustered factors/issues into 3 categories: safety, convenience adn conviviality
+![image](https://github.com/user-attachments/assets/b54e6822-b9fa-45fe-86d6-c749feca4e79)
+![image](https://github.com/user-attachments/assets/19752d4b-659f-4e40-8966-be3ec4878c77)
+![image](https://github.com/user-attachments/assets/cbeb6e5a-38bf-4bb2-9925-7bc42d65b15c)
+### Step 3 - Mapping 
+Drawing from both field survey observations and georeferenced data obtained through interviews, the 22 issues were digitized as point features and categorized into thematic groups within a structured GIS database. (Using QGIS)
+
+![image](https://github.com/user-attachments/assets/9763f4c7-dd41-459c-ab97-dba9c08d4311)
+### Step 4 - 	Visualize all layers in 3D using QGIS2ThreeJS, Export to HTML and publish via web platform
 ## Tool
+QGIS 
+@Manual{QGIS_software,
+  title        = {QGIS Geographic Information System},
+  author       = {{QGIS Development Team}},
+  organization = {Open Source Geospatial Foundation},
+  year         = {2024},
+  url          = {http://qgis.org},
+}
 ## References 
 https://miliasv.github.io/CTstreets/?city=amsterdam#11.42/52.3451/4.915
+https://senseable.mit.edu/desirable-streets/
+https://sidewalk-sea.cs.washington.edu/explore
+
