@@ -46,7 +46,13 @@ QGIS
   url          = {http://qgis.org},
 }
 ## References 
-https://miliasv.github.io/CTstreets/?city=amsterdam#11.42/52.3451/4.915
+https://miliasv.github.io/CTstreets/?city=amsterdam#11.42/52.3451/4.915]
+
 https://senseable.mit.edu/desirable-streets/
+
 https://sidewalk-sea.cs.washington.edu/explore
+
+https://media.voog.com/0000/0036/2451/files/BeirutCommunityStreets_catalog_Venice2023.pdf
+
+https://cityform.mit.edu/projects/beirut-community-streets
 
