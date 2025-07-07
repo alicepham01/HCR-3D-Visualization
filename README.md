@@ -1,5 +1,5 @@
 # 3D mapping (Draft) 
-**[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(marker)**
+**[DEMO LIVE](https://alicepham01.github.io/HCR-3D-Visualization/) - This is just 3D model not the map to show images and voting hover,thus you can not click on the map pointer(issue markers)**
 Building
 Safety: point(, polygon (area in sidewalk that show issues, area lack of lighting and exists smell)
 Walkability_convenience
