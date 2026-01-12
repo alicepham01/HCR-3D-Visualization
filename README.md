@@ -33,7 +33,7 @@ We studied the literature and made a list of all the factors that are most commo
 ![image](https://github.com/user-attachments/assets/19752d4b-659f-4e40-8966-be3ec4878c77)
 ![image](https://github.com/user-attachments/assets/cbeb6e5a-38bf-4bb2-9925-7bc42d65b15c)
 
-### Visualizing issues and solution images
+### Step 3 - Visualizing issues and solution images
 Each problem location was documented with textual descriptions, spatial information, field photographs, and visualised design solutions to facilitate intuitive understanding and informed voting.
 
 <img width="564" height="463" alt="image" src="https://github.com/user-attachments/assets/bbfd8798-eff3-496b-981f-34d798997168" />
@@ -46,7 +46,8 @@ Drawing from both field survey observations and georeferenced data obtained thro
 ![image](https://github.com/user-attachments/assets/9763f4c7-dd41-459c-ab97-dba9c08d4311)
 ### Step 5 - 	Visualize all layers in 3D using QGIS2ThreeJS, Export to HTML.
 Follow this [instruction](https://opengislab.com/blog/2023/3/11/how-to-incorporate-3d-models-into-qgis-to-create-a-3d-scene) to visualize and export folder
-### Step 6 - 
+### Step 6 - Integrated Synthesis View of All Issues and Scenario 3
+[LIVE DEMO](https://minhtampham298.wixsite.com/hoconrua)
 ## Tool
 QGIS 
 @Manual{QGIS_software,
@@ -66,4 +67,8 @@ https://sidewalk-sea.cs.washington.edu/explore
 https://media.voog.com/0000/0036/2451/files/BeirutCommunityStreets_catalog_Venice2023.pdf
 
 https://cityform.mit.edu/projects/beirut-community-streets
+
+https://opengislab.com/blog/2023/3/11/how-to-incorporate-3d-models-into-qgis-to-create-a-3d-scene
+
+
 
